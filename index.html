@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#2c1810">
+    <title>The Letter That Won't Be Sent · for Naemi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Password Lock -->
+<div class="password-overlay" id="passwordOverlay">
+    <div class="password-card">
+        <div class="password-icon">📖</div>
+        <h2>a letter that won't be sent</h2>
+        <p class="password-hint">enter the word</p>
+        <input type="password" id="passwordInput" placeholder="..." autocomplete="off" autocorrect="off" autocapitalize="none">
+        <button id="unlockBtn">unlock</button>
+        <p class="password-error" id="passwordError"></p>
+        <div class="password-footnote">"Notebook"</div>
+    </div>
+</div>
+
+<!-- The Book -->
+<div class="main-content" id="mainContent" style="display: none;">
+    
+    <!-- Hidden Audio -->
+    <audio id="pianoAudio" loop preload="auto" crossorigin="anonymous">
+        <source src="https://cdn.pixabay.com/download/audio/2022/02/22/audio_d9c4a4f1c7.mp3?filename=soft-piano-ambient-112191.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Protection Overlay for Screenshots -->
+    <div class="protection-overlay" id="protectionOverlay"></div>
+
+    <div class="book-container">
+        <!-- Book Cover -->
+        <div class="book-cover" id="bookCover">
+            <div class="cover-front">
+                <div class="cover-content">
+                    <div class="cover-icon">✨</div>
+                    <h1>the letter that<br>won't be sent</h1>
+                    <div class="cover-decoration"></div>
+                    <p class="cover-subtitle">for Naemi</p>
+                    <div class="cover-spain-italy">
+                        <span>🇪🇸</span>
+                        <span>🇮🇹</span>
+                        <span>🇩🇪</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-spine"></div>
+            <button class="open-book-btn" id="openBookBtn">open the book →</button>
+        </div>
+
+        <!-- Open Book -->
+        <div class="book-open" id="bookOpen" style="display: none;">
+            <!-- Candle -->
+            <div class="candle-side">
+                <div class="candle-wrapper" id="candleWrapper">
+                    <div class="candle-body">
+                        <div class="candle-wax"></div>
+                        <div class="candle-wick"></div>
+                        <div class="candle-flame" id="candleFlame">
+                            <div class="flame-inner"></div>
+                        </div>
+                    </div>
+                    <div class="candle-glow" id="candleGlow"></div>
+                    <span class="candle-label">light a candle</span>
+                </div>
+            </div>
+
+            <!-- Book pages -->
+            <div class="book-pages-area">
+                <div class="book-spine-visible"></div>
+                <div class="pages-container">
+                    <div class="book-header">
+                        <div class="map-icon-container" id="mapIconContainer">
+                            <div class="map-icon">🗺️</div>
+                            <div class="map-popup" id="mapPopup">
+                                <div class="map-popup-content">
+                                    <span class="map-marker">📍</span>
+                                    <div>
+                                        <strong>Stuttgart, Germany</strong><br>
+                                        <span class="map-caption">where her story began</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chapter-badge" id="chapterBadge">chapter I</div>
+                    </div>
+
+                    <div class="page-flip-container">
+                        <div class="page-current" id="currentPage">
+                            <div class="page-content">
+                                <span class="page-number" id="pageNumber">I</span>
+                                <div class="page-text" id="pageText"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-navigation">
+                        <button class="nav-arrow prev-arrow" id="prevPageBtn" disabled>← previous</button>
+                        <div class="page-counter" id="pageCounter">1 / 6</div>
+                        <button class="nav-arrow next-arrow" id="nextPageBtn">next →</button>
+                    </div>
+
+                    <div class="star-message-section">
+                        <div class="star-trigger" id="starTrigger">
+                            <div class="star-icon">⭐</div>
+                            <span>leave a message here if you please</span>
+                        </div>
+                        <div class="message-panel" id="messagePanel" style="display: none;">
+                            <textarea id="messageInput" placeholder="write something... anything..." rows="3" autocomplete="off"></textarea>
+                            <div class="message-buttons">
+                                <button id="saveMessageBtn">save</button>
+                                <button id="closeMessageBtn">close</button>
+                            </div>
+                            <div class="saved-messages-list" id="savedMessagesList"></div>
+                        </div>
+                    </div>
+
+                    <div class="book-footer">
+                        <span>written on a day that felt like missing you</span>
+                        <span class="book-date">24 May 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
