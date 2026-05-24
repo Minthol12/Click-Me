@@ -201,6 +201,37 @@ body {
     font-size: 1.4rem;
 }
 
+/* Book Spine with Her Name */
+.cover-spine {
+    position: absolute;
+    left: -8px;
+    top: 15px;
+    bottom: 15px;
+    width: 8px;
+    background: #b87a4a;
+    border-radius: 2px 0 0 2px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-spine::before {
+    content: "✦ NAEMI ✦";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    white-space: nowrap;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    color: #fef0da;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
 .open-book-btn {
     margin-top: 1.5rem;
     background: #f5e2c1;
@@ -432,14 +463,16 @@ body {
     font-size: 0.65rem;
 }
 
+/* Pink Chapter Badge (from her prom dress) */
 .chapter-badge {
     font-family: 'Inter', sans-serif;
     font-size: 0.65rem;
     letter-spacing: 1px;
-    color: #b88a62;
-    background: #fcf3e6;
+    color: #d47a7a;
+    background: #fff0f0;
     padding: 0.2rem 0.7rem;
     border-radius: 30px;
+    border-left: 2px solid #f0a0a0;
 }
 
 /* Page flip container */
@@ -474,7 +507,7 @@ body {
     display: inline-block;
     font-size: 0.9rem;
     font-weight: 400;
-    color: #c89f7a;
+    color: #d47a7a;
     border-bottom: 1px solid #f0dfce;
     padding-bottom: 0.2rem;
     margin-bottom: 0.8rem;
@@ -620,7 +653,7 @@ body {
     padding: 0.5rem;
     border-radius: 12px;
     margin-bottom: 0.5rem;
-    border-left: 3px solid #c89f7a;
+    border-left: 3px solid #d47a7a;
     word-wrap: break-word;
 }
 
@@ -698,5 +731,9 @@ body {
     
     .book-pages-area {
         padding: 0.8rem;
+    }
+    
+    .cover-spine::before {
+        font-size: 0.5rem;
     }
 }

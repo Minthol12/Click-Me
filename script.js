@@ -77,49 +77,207 @@ if (openBookBtn) {
     });
 }
 
-// ==================== LETTER CONTENT ====================
+// ==================== 15 FULL & POETIC PAGES ====================
+
 const chapters = [
-    `I don't know if you will ever read this, but I am very grateful for you. You have shown me a kind soul, someone that I want to surround myself with more — people like you. You brought pieces of your world into mine, and now mine feels empty without you in it.
+    // PAGE I - The Opening / Gratitude
+    `Dear Naemi,
     <br><br>
-    You looked at life in a way that made everything around you more beautiful. I will always remember you. I don't love you, but I love <em>you</em>. You as a person are one of the purest people I have met.
+    I don't know if I will ever send you this. I don't know if you will ever read these words or if they will just live here forever, trapped in this letter that never finds your hands. But I need to write them anyway. I need to say them somewhere.
     <br><br>
-    I know we didn't talk a lot. But when we did, hearing the softness of your voice, the calmness — it made me calm and my mind quiet. No matter how much time passes, there will always be a version of me standing inside those moments with you.`,
-    
-    `There are things I regret saying and things I regret not saying. I catch myself replaying moments with you like scenes I am scared to forget. Sometimes I think the hardest thing in life is meeting someone who feels like home when they were never meant to stay.
+    I am very grateful for you. More than you will ever understand. You have shown me a kind soul, the kind I didn't think existed anymore. Someone that I want to surround myself with more — people like you. People who are gentle without trying. People who make the world feel less heavy just by being in it.
     <br><br>
-    I don't know if we will ever cross paths again. Probably not. The chance is very small. But I want you to know that I will forever be grateful to you more than you will ever know.
+    You brought pieces of your world into mine. Small pieces. A conversation here. A laugh there. A few moments that I didn't realize would become everything. And now that you're gone, mine feels empty without you in it. Like someone took a room full of furniture and left only the echo of where everything used to be.
     <br><br>
-    Maybe that's the cruel thing about exchange students. They teach people how attached a heart can get in such little time. You came into my life with another language, another culture, another home — yet somehow your soul still felt familiar to mine.`,
-    
-    `I know I am probably one of the last people you like talking to. That is fine. I am just grateful that you did. It made the darkness not so dark. You were my safety net without knowing it, and I am sorry for that. I put things on you just because I needed something to fill the void in my chest.
+    You looked at life in a way that made everything around you more beautiful. I don't know how you did that. I don't know if you even knew you were doing it. But when you looked at something, it mattered. When you smiled at something, it meant something.
     <br><br>
-    I will always feel deeply about you. Not in a romantic way, but in a way that feels like something I cannot explain.
+    I will always remember you. I don't love you — not in the way people mean when they say those words. But I love <em>you</em>. I love the person you are. The way you exist in this world. The way you make other people feel seen without even realizing it.
     <br><br>
-    Since you may never read this, I will be honest. I did like you at the beginning when you moved here, but I think that was just because you were new and someone I could talk about. That is my own insecurity. I have no social skills. I used you to talk about.`,
-    
-    `I won't forget prom night. Even though it wasn't the best, those short conversations with you were the best thing ever.
+    You as a person are one of the purest people I have met. And I have met a lot of people. Most of them leave no mark. But you — you carved something into me. Something small. Something I didn't ask for. Something I don't know how to live without anymore.`,
+
+    // PAGE II - Her Voice / Calmness / Quiet Mind
+    `I know we didn't talk a lot. That is one of my greatest regrets. I replay it in my head like a movie I'm scared to forget — all the moments I could have said something, asked something, stayed a little longer. But I was scared. I am always scared.
     <br><br>
-    Sadly, a piece of me will always search for you in crowded airports and unfamiliar accents. I hate to admit this, but somewhere between your stories, your laugh, and the way you looked at things differently — I fell for you. Your accent became my favorite sound without me even realizing it.
+    But when we did talk — those rare, short moments — something happened inside me. Hearing the softness of your voice, the calmness, it made me calm. My mind, which never stops running, which never shuts up, went quiet. Completely quiet. Do you understand how rare that is for me? My brain is a warzone most days. But you — your voice was like a ceasefire.
     <br><br>
-    I remember you reading my poems. Seeing that smile on your face filled my heart with joy. You read the poem about prom, and you smiled, and my heart swelled more than I have ever felt in my life. Maybe it was because you read a piece of me and found it beautiful.`,
-    
-    `Your smile. Your eyes. Your hair. Your accent. It is all beautiful. I have never felt this way about a girl I don't love — which is strange, because I always thought if you felt this way, you loved them. But you proved that is not true. I love your soul. How bright it is. How gentle you are with your words.
+    No matter how much time passes, there will always be a version of me standing inside those moments with you. A version of me frozen in time, still hearing your voice, still feeling that rare and beautiful silence. Even when everything else changes, that version of me will not move. He will stand there forever, holding onto the only peace he ever knew.
     <br><br>
-    The way they leave your mouth is like snow falling. So soft, but somehow filling the whole silence.
+    There are a lot of things I regret saying and a lot of things I regret not saying. I keep a list in my head. The things I should have told you. The questions I should have asked. The compliments I swallowed because I was too afraid of sounding stupid. I carry that list everywhere. It lives in my chest like something breathing.
     <br><br>
-    You may forget me in ten years, and that hurts. I just wish we could have been friends. I wish I talked to you more. I wish I asked you more questions. I have so much regret.`,
-    
-    `You became one of the most important people in my life. The first time I really talked to you, at that basketball game — it was awkward as hell. But I liked the awkwardness because I hadn't felt that in a long time.
+    I catch myself replaying moments with you like scenes I am scared to forget. The way you laughed at something I said. The way you looked at me when you thought I wasn't paying attention. The way you existed so softly in a world that is so loud.
     <br><br>
-    You are one of the bravest people I have met. I could have never gone to a foreign school. I could have never put myself out there like you did. I am envious of you for that.
+    And sometimes I think the hardest thing in life is meeting someone who feels like home when they were never meant to stay. You felt like home. A home I never had. A home I didn't know I was looking for. And now I am homesick for someone who was never mine to miss.`,
+
+    // PAGE III - The Handshake (only she would recognize)
+    `There is this thing we had. A handshake. Small. Silly, maybe. The kind of thing that doesn't mean anything to anyone else. But it meant something to me.
     <br><br>
-    I hope you find your Noah. I hope he treats you like royalty. I hope you travel everywhere you want to go. I wish the best for you. I truly do.
+    I don't know why that moment stuck. Maybe because in that tiny, stupid handshake, I felt seen. Like for a second, I wasn't just someone you tolerated. I wasn't just the quiet kid in the corner. I was someone you played along with. Someone you smiled at. Someone you touched, even if it was just for a second.
     <br><br>
-    I should have asked you to slow dance at prom. I wish you knew how much I regret not asking.
+    I think about that handshake more than I should. More than is normal. I think about the way your hand felt. The way you didn't pull away too fast. The way we both laughed a little, like we were in on something no one else understood.
     <br><br>
-    I am afraid I will forget your voice, your laugh. I am afraid I will look for you in every girl I meet. And I don't know if that is a bad thing or a good thing.
+    It wasn't a conversation. It wasn't deep. It wasn't the kind of moment people write poems about. But it was ours. And I haven't had anything that felt like mine in a very long time. Everything else in my life feels borrowed or broken. But that handshake — that was ours. That was real. That was something I didn't have to share with anyone else.
     <br><br>
-    I wish I said goodbye. But goodbyes are forever. And I hope the distance between us won't be forever. I hope I will see you again.`
+    I wonder if you remember it. I wonder if it lives anywhere in your mind the way it lives in mine. Or if it was just a second to you, something you did and then forgot. I hope you remember it. I hope somewhere, in the back of your memory, there is a small room where that handshake lives. And maybe, on some quiet night, you open that door and smile.
+    <br><br>
+    Because I do. I open that door all the time.`,
+
+    // PAGE IV - Prom Night / The Pink Dress
+    `I won't forget prom night. Even though it wasn't the best night of my life — honestly, it was awkward and loud and I felt out of place the entire time — having those short conversations with you was the best thing ever. The best thing. Nothing else that night mattered. Not the music. Not the decorations. Not the people. Just you. Just the few minutes I got to stand near you and pretend I belonged there.
+    <br><br>
+    You wore pink. A pink dress. Soft pink. The kind of pink that doesn't scream for attention but still steals every drop of it. And you looked so lovely in it. I remember thinking — she looks like something from a painting. The kind of painting you would stare at in a museum and not want to leave. The kind of painting that makes you forget where you are because you're too busy looking at her.
+    <br><br>
+    I remember the way the dress moved when you walked. The way the color made your skin look warmer. The way you smiled in it, like you knew you looked beautiful but you were too humble to say it. I wanted to tell you. I wanted to say, "You look like a sunset. You look like something I want to remember forever." But I didn't. I swallowed the words like I always do.
+    <br><br>
+    Pink is your color. Not because of the dress. Because when I think of you, I see pink. Soft. Warm. Unforgettable. The color of a sky just before the sun disappears. The color of something gentle in a world that is rarely gentle. Every time I see pink now, I think of you. Every time. And I don't think that will ever stop.
+    <br><br>
+    I should have told you that night. I should have said, "You look beautiful." But I was scared. I am always scared. And now I am writing it in a letter you will probably never read. You looked beautiful, Naemi. You looked like everything I have ever wanted and didn't know how to ask for.`,
+
+    // PAGE V - Reading Poems / The Smile
+    `I don't know if this was genuine to you. I don't know if you remember it the way I do. But I remember you reading my poems. I remember handing them to you like I was handing over a piece of my ribcage. Because that's what my poems are — pieces of me. Blood and bone and things I can't say out loud.
+    <br><br>
+    And you read them. You actually read them. You didn't just glance and hand them back. You sat there, with my words in your hands, and you read every single one. And then I saw it — that smile. That small, soft smile that spread across your face like light coming through a window.
+    <br><br>
+    Seeing that smile filled my heart with joy. No. Joy is not the right word. It filled my heart with something I don't have a name for. Something bigger than joy. Something that made my chest feel too small for everything I was feeling.
+    <br><br>
+    I saw you reading the poem about prom. The one I wrote about that night. And I saw you smile. And that made my heart swell more than I have ever felt in my life. More than any achievement. More than any victory. More than anything. Because you read a piece of me — a messy, ugly, honest piece of me — and you found it beautiful. You didn't laugh. You didn't look away. You smiled.
+    <br><br>
+    That smile is still inside my chest. I don't think it will ever leave. I think it lives there now, curled up somewhere between my ribs, keeping me warm on nights when everything else feels cold. You gave me that. You gave me a smile I will carry until I die.
+    <br><br>
+    I wish I could tell you that. I wish I could say, "Your smile healed something in me." But I didn't. I just stood there, quiet, hoping you couldn't see how much you meant to me.`,
+
+    // PAGE VI - Her Art / Her Music / Red Bulls
+    `You are so good at art. I don't think you know how good. Or maybe you do and you're just too humble to say it. But the way you see things — the way your eyes find beauty in places other people don't even look — it amazes me.
+    <br><br>
+    I wish I had asked to see more of your drawings. I wish I had said, "Show me everything you've ever made. I want to see the world through your hands." But I didn't. I was too scared. Too quiet. Too worried that you would think I was weird for asking. So I just admired from a distance, like looking at a painting in a gallery I wasn't allowed to touch.
+    <br><br>
+    And the music you love. I am grateful you shared it with me.I know it mattered to you. I could tell by the way you talked about it, the way your eyes lit up when someone mentioned a song you loved. That made it matter to me. I wanted to know every song that ever made you feel something. I wanted to make a playlist of everything that ever touched your heart, just so I could listen to it and pretend I was inside your head for a little while.
+    <br><br>
+    Also — the Red Bulls. Pomegranate or white. I noticed that. I noticed everything. The way you reached for the same drink every time. The way you didn't even think about it, like it was just part of who you were. Small things. Tiny details. The kind of things most people overlook. But I didn't overlook them. I collected them. I stored them away like little treasures.
+    <br><br>
+    I noticed the way you tucked your hair behind your ear. The way you laughed with your whole face. The way you looked down when you were thinking. I noticed everything, Naemi. Everything. And I remember all of it.`,
+
+    // PAGE VII - How She Looks at Life Differently
+    `You look at life in a way I don't understand. Not in a bad way. Not in a way that confuses me. But in a way that makes me wish I could see through your eyes for just one day. Just one. So I could understand what it feels like to find beauty in things that everyone else calls ordinary.
+    <br><br>
+    Things that are ugly to everyone else — you find something beautiful in them. A cracked sidewalk. An old building. A cloudy sky. You looked at things and saw stories. You looked at things and saw art. I don't know how you do that. I don't know if you were born with it or if you taught yourself. But it is rare. It is so rare.
+    <br><br>
+    Things that are ordinary — you make them feel like magic. A cup of coffee. A walk home. A quiet conversation. When you were there, everything felt different. Brighter. Softer. More important. You had this way of making the mundane feel sacred.
+    <br><br>
+    I don't know how you do that. But I know the world is luckier because you see it the way you do. I am luckier because I got to stand next to you while you looked at things. Even if it was only for a little while. Even if I never told you.
+    <br><br>
+    You taught me that there is beauty in small things. You taught me to look closer. You taught me that maybe — just maybe — the world isn't as ugly as I thought it was. You didn't know you were teaching me. You were just being yourself. But I was learning. I was always learning when I was near you.`,
+
+    // PAGE VIII - Feeling Unwanted / Safety Net
+    `I know I am probably one of the last people you like talking to. I can feel it. The way conversations with me feel like chores. The way you look for exits. I don't blame you. I am a lot. I am too much. I have always been too much.
+    <br><br>
+    That is fine. I am just grateful that you did talk to me. Even if it was out of pity. Even if it was because no one else was around. You talked to me. You looked at me. You treated me like I was human when most people treat me like furniture.
+    <br><br>
+    It made the darkness not so dark. You don't understand how dark it gets in my head. You don't know about the nights I spend staring at ceilings, wondering why I am the way I am. You don't know about the thoughts that circle like vultures, waiting for me to fall asleep so they can tear me apart. But you — when you talked to me — the vultures went quiet. Just for a little while. Just long enough for me to breathe.
+    <br><br>
+    You were my safety net without knowing it. And I am sorry for that. I am sorry that I put that on you without asking. I am sorry that I used your kindness as a crutch. That is not fair to you. You did not sign up to hold someone together. You were just being nice. And I turned your niceness into survival.
+    <br><br>
+    I put a lot of things on you just because I needed something to fill the void in my chest. The void that never goes away. The void that has been there for as long as I can remember. You didn't know you were filling it. You didn't know you were keeping me from falling apart. But you were. And I will never forget that.`,
+
+    // PAGE IX - The Void / What She Filled
+    `I have this void. This empty space inside my chest that never goes away. It has been there for years. Some days it is small, like a pebble in my shoe. Other days it is enormous, like a canyon I cannot cross.
+    <br><br>
+    I have tried so many things to fill it. Food. Sleep. Music. Cutting. Nothing worked. The void always came back. It always wins. It is patient. It waits for me to feel okay, and then it reminds me that I am not.
+    <br><br>
+    Then you talked to me. And the void got quieter. Not gone. Never gone. But quieter. Like someone turned down the volume on a song I had been listening to for years. I didn't even notice how loud it was until you made it soft.
+    <br><br>
+    That is more than anyone else has ever done. No one else has ever made the void shut up. No one else has ever made me feel like maybe — just maybe — I am not completely broken. You didn't even know you were doing it. You were just being you. Just existing. Just talking to me like I was a normal person.
+    <br><br>
+    And that was enough. More than enough. It was everything.
+    <br><br>
+    I don't know how to thank you for that. I don't know how to say, "You quieted the thing inside me that has been screaming for years." That sounds dramatic. That sounds like too much. But it is the truth. And this letter is the only place I can tell the truth.`,
+
+    // PAGE X - Falling for Her / Not Love, But Something
+    `I will always feel deeply about you. Not in a romantic way, not in the way people write songs about, not in the way that ends with weddings and forever. But in a way that feels like something I cannot explain. Something that doesn't have a name. Something that lives in a part of my heart I didn't know existed until you showed up.
+    <br><br>
+    I have never felt this way about a girl I don't love. That is the strangest part. Because I always thought — if you feel this way about someone, you love them. That is just how it works. Feelings this big? This consuming? This permanent? That has to be love.
+    <br><br>
+    But you proved that is not true. You proved that there are feelings bigger than love. Or maybe smaller. Or maybe just different. I don't have the words for it. And I am someone who usually has words.
+    <br><br>
+    I love your soul. How bright it is even on days when you are tired. How gentle you are with your words even when you don't have to be. The way you speak — the way your words leave your mouth — it is like snow falling. So soft. So quiet. But somehow filling the whole silence.
+    <br><br>
+    You don't try to be loud. You don't try to be noticed. But you are impossible to ignore. You are a soft thing in a loud world, and that is why I will never forget you. That is why a piece of me will always belong to you, even if you never asked for it.`,
+
+    // PAGE XI - Regrets / Things I Wish I Said
+    `You may forget me in ten years. Maybe sooner. Maybe you have already started to forget. And that hurts. It hurts more than I want to admit. Because you are etched into me. You are ink on skin. But to you — I might just be a smudge. A name you used to know. A face you used to recognize.
+    <br><br>
+    I just wish we could have been friends. Real friends. The kind who text each other stupid things at 2am. The kind who know each other's favorite songs and worst fears. The kind who stay.
+    <br><br>
+    I wish I talked to you more. Every time I saw you and stayed silent, I regretted it. Every time I walked away without saying something, I felt the weight of that choice pressing on my chest. I have so much regret. So much. It piles up inside me like snow in a blizzard.
+    <br><br>
+    I should have asked you to slow dance at prom. I wish you knew how much I regret not asking. I think about it all the time. What if I had just walked over. What if I had just opened my mouth. What if I had just said, "Would you like to dance?" Would you have said yes? Would you have smiled? I will never know. And that question will follow me for the rest of my life.
+    <br><br>
+    I wish I told you goodbye. The last time I saw you, I just let you leave. I didn't say anything. I didn't hug you. I didn't thank you. I just stood there like a statue, watching you walk away. I wish I had said, "Goodbye, Naemi. Thank you for everything." But goodbyes are forever. And I didn't want it to be forever.
+    <br><br>
+    I hope the distance between us won't be forever. I hope I will see you again. I know the chance is small. Microscopic, maybe. But I am holding onto it anyway. It is all I have left.`,
+
+    // PAGE XII - What I Hope for Her
+    `I hope you find your Noah. I hope there is someone out there who sees you the way I see you — but actually does something about it. Someone who tells you you're beautiful without swallowing the words. Someone who holds your hand in public and isn't afraid of who sees.
+    <br><br>
+    I hope he treats you like the royalty you deserve. I hope he notices the small things. The way you laugh. The way you look at art. The way your voice gets soft when you're tired. The way you tuck your hair behind your ear. The way you say certain words with an accent that makes them sound like music.
+    <br><br>
+    I hope he makes you feel seen. Not tolerated. Not endured. But truly, deeply seen.
+    <br><br>
+    I hope you travel everywhere you want to go. Spain. Italy. Everywhere. I hope you take photos of everything. I hope you fill journals with drawings of the places you visit. I hope you never stop making art. The world needs your art. The world needs your eyes. The world needs the way you see things.
+    <br><br>
+    I hope you are happy. Really happy. The kind of happy that makes you forget what sadness felt like. The kind of happy that feels like sunlight on your skin after a long winter.
+    <br><br>
+    I wish the best for you. I truly do. You deserve a life that feels as beautiful as you are. You deserve love that is loud and certain and unafraid. You deserve everything. Everything. And I hope you get it. Even if I am not there to see it. Especially if I am not there to see it.`,
+
+    // PAGE XIII - What I'm Afraid Of
+    `I am afraid I will forget your voice. The softness of it. The way you said my name. The way you laughed at things that weren't even that funny but you laughed anyway because you found joy in small places.
+    <br><br>
+    I am afraid I will forget your laugh. The sound of it. The way it made me feel like everything was going to be okay, even when it wasn't.
+    <br><br>
+    I am afraid I will look for you in every girl I meet. And I don't know if that is a bad thing or a good thing. Maybe it is both. Maybe it is a curse I will carry forever — seeing ghosts of you in strangers, hoping one of them will be kind the way you were kind, soft the way you were soft.
+    <br><br>
+    I am afraid you will read this and think it's too much. That I am too much. That my feelings are too heavy and my words are too many. That is why I push people away. That is why I stay quiet. I am afraid of being too much for someone. I am afraid of being left because I am exhausting.
+    <br><br>
+    But with you — I didn't want to push. I wanted to stay. I wanted to stand next to you and let you see all of me, even the ugly parts, even the broken parts, even the parts I hide from everyone else. I wanted you to see me and not run away.
+    <br><br>
+    I don't know if you would have stayed. I don't know if you would have looked at all of me and still wanted to be near me. I will never know. And that scares me too.`,
+
+    // PAGE XIV - The Cruel Thing About Exchange Students
+    `Maybe that's the cruel thing about exchange students. They teach people how attached a heart can get in such little time. They show up, they bloom in your life like flowers in spring, and then they leave. And you are left standing in an empty field, wondering how something so beautiful could disappear so fast.
+    <br><br>
+    You came into my life with another language, another culture, another home. You were from a place I had never been, a world I didn't know. Yet somehow your soul still felt familiar to mine. Like I had known you before. Like we had met in another life and were just picking up where we left off.
+    <br><br>
+    I don't know if we will ever cross paths again. Probably not. The chance is very small. The world is wide and we are just two people in it. But a piece of me will always search for you. In crowded airports. In unfamiliar accents. In the faces of strangers who walk past me too quickly.
+    <br><br>
+    I will listen for your voice in every crowd. I will look for your smile in every room. I will hope — foolishly, desperately — that one day, somewhere, I will turn a corner and you will be there.
+    <br><br>
+    And if that day never comes, I will still carry you. I will still hold the memory of you in my chest like something sacred. I will still be grateful that I got to know you, even for a little while. Even if it hurts. Even if missing you feels like drowning.
+    <br><br>
+    Some people are worth the pain of losing. You are one of them.`,
+
+    // PAGE XV - The Closing / Forever Grateful
+    `I don't know what else to say. I have so many thoughts running through my head. They are loud tonight. They are always loud. But when I write to you, they get a little quieter. Like you are still here. Like you are still calming my mind without even trying.
+    <br><br>
+    Thank you for existing. That sounds like a small thing to say, but I don't mean it small. I mean it huge. I mean it with my whole chest. Thank you for being born. Thank you for being you. Thank you for being in the world at the same time as me, even if our time together was short.
+    <br><br>
+    Thank you for being gentle when you didn't have to be. The world is not gentle. Most people are not gentle. But you were. You were soft in a way that made me believe softness was possible.
+    <br><br>
+    Thank you for reading my poems. For looking at my words and smiling. For making me feel like I wasn't invisible.
+    <br><br>
+    Thank you for the handshake. The small, silly thing that meant everything to me.
+    <br><br>
+    Thank you for wearing pink to prom. For looking like a painting. For giving me something beautiful to remember.
+    <br><br>
+    Thank you for making the darkness not so dark. For being a light I didn't know I needed. For existing in my life, even briefly, even quietly, even without knowing how much you were doing.
+    <br><br>
+    I will forever be grateful for you. More than you will ever know. More than these words can say. More than this letter can hold.
+    <br><br>
+    This letter won't be sent. I know that. I have known it from the beginning. But if you're reading this — somehow — you already know it's for you. You already know who wrote it. You already know that every word is true.
+    <br><br>
+    <em>Yours in ways I don't have words for,</em>
+    <br><br>
+    — a boy who will never forget the girl in pink
+    <br><br>
+    <em>24 May 2026</em>`
 ];
 
 let currentChapter = 0;
@@ -132,7 +290,7 @@ const prevBtn = document.getElementById("prevPageBtn");
 const nextBtn = document.getElementById("nextPageBtn");
 const currentPageDiv = document.getElementById("currentPage");
 
-const romanNumerals = ["I", "II", "III", "IV", "V", "VI"];
+const romanNumerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV"];
 
 function updatePage() {
     pageTextDiv.innerHTML = chapters[currentChapter];
@@ -225,7 +383,6 @@ function initScreenshotProtection() {
     const overlay = document.getElementById("protectionOverlay");
     if (!overlay) return;
     
-    // Method 1: Detect keyboard shortcuts (Print Screen, Cmd+Shift+3, etc.)
     document.addEventListener("keyup", (e) => {
         if (e.key === "PrintScreen" || (e.key === "s" && (e.ctrlKey || e.metaKey))) {
             overlay.classList.add("active");
@@ -235,7 +392,6 @@ function initScreenshotProtection() {
         }
     });
     
-    // Method 2: Detect when page becomes inactive (app switcher on mobile)
     document.addEventListener("visibilitychange", () => {
         if (document.hidden) {
             overlay.classList.add("active");
@@ -246,7 +402,6 @@ function initScreenshotProtection() {
         }
     });
     
-    // Method 3: Blur detection for mobile app switch
     window.addEventListener("blur", () => {
         overlay.classList.add("active");
         setTimeout(() => {
@@ -254,24 +409,15 @@ function initScreenshotProtection() {
         }, 200);
     });
     
-    // Method 4: Disable context menu
     document.addEventListener("contextmenu", (e) => {
         e.preventDefault();
         return false;
-    });
-    
-    // Method 5: Disable drag and drop of images
-    const images = document.querySelectorAll("img");
-    images.forEach(img => {
-        img.addEventListener("dragstart", (e) => e.preventDefault());
     });
 }
 
 // ==================== PRIVACY PROTECTION ====================
 function initPrivacyProtection() {
-    // Disable common screenshot shortcuts
     document.addEventListener("keydown", (e) => {
-        // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
         if (e.key === "F12" || 
             (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
             (e.ctrlKey && e.key === "u")) {
@@ -279,34 +425,24 @@ function initPrivacyProtection() {
             return false;
         }
         
-        // Ctrl+S, Ctrl+P
         if ((e.ctrlKey || e.metaKey) && (e.key === "s" || e.key === "p")) {
             e.preventDefault();
             return false;
         }
     });
     
-    // Disable long-press menu on mobile
     document.querySelectorAll("*").forEach(el => {
         el.addEventListener("contextmenu", (e) => e.preventDefault());
-        el.addEventListener("touchstart", (e) => {
-            if (e.touches.length > 1) {
-                e.preventDefault();
-            }
-        });
     });
     
-    // Add CSS to prevent selection (already in CSS but reinforcing with JS)
     document.body.style.webkitTouchCallout = "none";
     document.body.style.webkitUserSelect = "none";
 }
 
 // ==================== MOBILE TOUCH FIXES ====================
-// Ensure buttons work on touch devices
 const allButtons = document.querySelectorAll("button");
 allButtons.forEach(btn => {
     btn.addEventListener("touchstart", (e) => {
-        // Just to ensure touch registers
         btn.style.transform = "scale(0.97)";
         setTimeout(() => {
             btn.style.transform = "";
@@ -314,17 +450,4 @@ allButtons.forEach(btn => {
     });
 });
 
-// Prevent zoom on double tap for buttons
-document.querySelectorAll("button, .star-trigger, .candle-wrapper, .map-icon-container").forEach(el => {
-    el.addEventListener("touchstart", (e) => {
-        if (e.touches.length === 1) {
-            e.preventDefault();
-            // Simulate click after small delay
-            setTimeout(() => {
-                el.click();
-            }, 10);
-        }
-    });
-});
-
-console.log("Website loaded. Protected and ready.");
+console.log("15 full poetic pages loaded. Protected and ready for her.");
