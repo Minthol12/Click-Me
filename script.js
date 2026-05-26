@@ -4,13 +4,18 @@ const mainContent = document.getElementById("mainContent");
 const passwordInput = document.getElementById("passwordInput");
 const unlockBtn = document.getElementById("unlockBtn");
 const passwordError = document.getElementById("passwordError");
+const passwordHint = document.getElementById("passwordHint");
+
+// Set The Notebook hint
+passwordHint.innerHTML = "Your Favorite Movie";
 
 function checkPassword() {
     if (passwordInput.value === correctPassword) {
         passwordOverlay.style.display = "none";
         mainContent.style.display = "block";
-        initAudio();
         initProtection();
+        initPetals();
+        initTabs();
     } else {
         passwordError.textContent = "that's not the word... try again";
         passwordInput.value = "";
@@ -23,40 +28,35 @@ passwordInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") checkPassword();
 });
 
-let pianoAudio = null;
-let audioPlaying = false;
-
-function initAudio() {
-    pianoAudio = document.getElementById("pianoAudio");
-    if (pianoAudio) pianoAudio.volume = 0.2;
-}
-
-const candleWrapper = document.getElementById("candleWrapper");
-const candleFlame = document.getElementById("candleFlame");
-const candleGlow = document.getElementById("candleGlow");
-let isLit = false;
-
-if (candleWrapper) {
-    candleWrapper.addEventListener("click", () => {
-        if (!isLit) {
-            candleFlame.classList.add("active");
-            candleGlow.classList.add("active");
-            isLit = true;
-            if (pianoAudio && !audioPlaying) {
-                pianoAudio.play().then(() => audioPlaying = true).catch(e => console.log(e));
-            }
-        } else {
-            candleFlame.classList.remove("active");
-            candleGlow.classList.remove("active");
-            isLit = false;
-            if (pianoAudio && audioPlaying) {
-                pianoAudio.pause();
-                audioPlaying = false;
-            }
-        }
+// Tab switching
+function initTabs() {
+    const sectionBtns = document.querySelectorAll(".section-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+    
+    sectionBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const tabId = btn.getAttribute("data-tab");
+            
+            sectionBtns.forEach(b => b.classList.remove("active"));
+            tabContents.forEach(c => c.classList.remove("active"));
+            
+            btn.classList.add("active");
+            const activeContent = document.getElementById(`tab-${tabId}`);
+            if (activeContent) activeContent.classList.add("active");
+        });
     });
 }
 
+// Song buttons open Spotify
+const playBtns = document.querySelectorAll(".play-btn");
+playBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const url = btn.getAttribute("data-url");
+        if (url) window.open(url, "_blank");
+    });
+});
+
+// Book cover open
 const bookCover = document.getElementById("bookCover");
 const bookOpen = document.getElementById("bookOpen");
 const openBookBtn = document.getElementById("openBookBtn");
@@ -64,7 +64,7 @@ const openBookBtn = document.getElementById("openBookBtn");
 if (openBookBtn) {
     openBookBtn.addEventListener("click", () => {
         bookCover.style.display = "none";
-        bookOpen.style.display = "flex";
+        bookOpen.style.display = "block";
     });
 }
 
@@ -73,8 +73,8 @@ function formatPoeticText(text) {
         'I don\'t <em>love</em> you, but I love <span class="cursive-you">you</span>');
 }
 
+// ALL 15 PAGES - FULLY PRESERVED
 const chaptersRaw = [
-    // PAGE I - The Opening / Gratitude
     `Dear Naemi,
     <br><br>
     I don't know if I will ever send you this. I don't know if you will ever read these words or if they will just live here forever, trapped in this letter that never finds your hands. But I need to write them anyway. I need to say them somewhere.
@@ -89,7 +89,6 @@ const chaptersRaw = [
     <br><br>
     You as a person are one of the purest people I have met. And I have met a lot of people. Most of them leave no mark. But you — you carved something into me. Something small. Something I didn't ask for. Something I don't know how to live without anymore.`,
 
-    // PAGE II - Her Voice / Calmness / Quiet Mind
     `I know we didn't talk a lot. That is one of my greatest regrets. I replay it in my head like a movie I'm scared to forget — all the moments I could have said something, asked something, stayed a little longer. But I was scared. I am always scared.
     <br><br>
     But when we did talk — those rare, short moments — something happened inside me. Hearing the softness of your voice, the calmness, it made me calm. My mind, which never stops running, which never shuts up, went quiet. Completely quiet. Do you understand how rare that is for me? My brain is a warzone most days. But you — your voice was like a ceasefire.
@@ -102,7 +101,6 @@ const chaptersRaw = [
     <br><br>
     And sometimes I think the hardest thing in life is meeting someone who feels like home when they were never meant to stay. You felt like home. A home I never had. A home I didn't know I was looking for. And now I am homesick for someone who was never mine to miss.`,
 
-    // PAGE III - The Handshake
     `There is this thing we had. A handshake. Small. Silly, maybe. The kind of thing that doesn't mean anything to anyone else. But it meant something to me.
     <br><br>
     I don't know why that moment stuck. Maybe because in that tiny, stupid handshake, I felt seen. Like for a second, I wasn't just someone you tolerated. I wasn't just the quiet kid in the corner. I was someone you played along with. Someone you smiled at. Someone you touched, even if it was just for a second.
@@ -115,7 +113,6 @@ const chaptersRaw = [
     <br><br>
     Because I do. I open that door all the time.`,
 
-    // PAGE IV - Prom Night / The Pink Dress
     `I won't forget prom night. Even though it wasn't the best night of my life — honestly, it was awkward and loud and I felt out of place the entire time — having those short conversations with you was the best thing ever. The best thing. Nothing else that night mattered. Not the music. Not the decorations. Not the people. Just you. Just the few minutes I got to stand near you and pretend I belonged there.
     <br><br>
     You wore pink. A pink dress. Soft pink. The kind of pink that doesn't scream for attention but still steals every drop of it. And you looked so lovely in it. I remember thinking — she looks like something from a painting. The kind of painting you would stare at in a museum and not want to leave. The kind of painting that makes you forget where you are because you're too busy looking at her.
@@ -126,7 +123,6 @@ const chaptersRaw = [
     <br><br>
     I should have told you that night. I should have said, "You look beautiful." But I was scared. I am always scared. And now I am writing it in a letter you will probably never read. You looked beautiful, Naemi. You looked like everything I have ever wanted and didn't know how to ask for.`,
 
-    // PAGE V - Reading Poems / The Smile
     `I don't know if this was genuine to you. I don't know if you remember it the way I do. But I remember you reading my poems. I remember handing them to you like I was handing over a piece of my ribcage. Because that's what my poems are — pieces of me. Blood and bone and things I can't say out loud.
     <br><br>
     And you read them. You actually read them. You didn't just glance and hand them back. You sat there, with my words in your hands, and you read every single one. And then I saw it — that smile. That small, soft smile that spread across your face like light coming through a window.
@@ -139,7 +135,6 @@ const chaptersRaw = [
     <br><br>
     I wish I could tell you that. I wish I could say, "Your smile healed something in me." But I didn't. I just stood there, quiet, hoping you couldn't see how much you meant to me.`,
 
-    // PAGE VI - Her Art
     `I remember seeing your art projects in class. The way you could look at something — a picture, a house, anything — and just draw it. Not trace it. Not copy it slowly. Just look and draw. Your hand knew what to do without you even thinking.
     <br><br>
     There was this one time in housing class. You were drawing a house. Just looking at a picture and putting it onto paper. And it looked exactly like the picture. I remember watching you and thinking — how does she do that? How does someone just see something and make it appear?
@@ -148,7 +143,6 @@ const chaptersRaw = [
     <br><br>
     I wish I had told you that. I wish I had said, "You're really good at that." But I didn't. I just watched from across the room, quiet, hoping you wouldn't notice me staring. I noticed everything, Naemi. Everything.`,
 
-    // PAGE VII - Red Bulls / Small Details
     `I noticed the small things. The Red Bulls. Pomegranate or white. You always reached for one of those two. Never the regular one. Never the blue one. Just pomegranate or white. I don't know why that stuck with me. Maybe because it was a pattern. Something you did without thinking. Something that was just yours.
     <br><br>
     I noticed the way you tucked your hair behind your ear. The way you laughed with your whole face. The way you looked down when you were thinking. The way you said certain words with an accent that made them sound different. Softer. Like they meant more when they came out of your mouth.
@@ -157,7 +151,6 @@ const chaptersRaw = [
     <br><br>
     I never told you any of this. I never said, "I notice things about you." I was too scared. Too quiet. Too worried that you would think I was weird. But I am weird. And I noticed everything. And I remember all of it.`,
 
-    // PAGE VIII - How She Looks at Life Differently
     `You look at life in a way I don't understand. Not in a bad way. Not in a way that confuses me. But in a way that makes me wish I could see through your eyes for just one day. Just one. So I could understand what it feels like to find beauty in things that everyone else calls ordinary.
     <br><br>
     Things that are ugly to everyone else — you found something beautiful in them. A cracked sidewalk. An old building. A cloudy sky. You looked at things and saw stories. You looked at things and saw art. I don't know how you do that. I don't know if you were born with it or if you taught yourself. But it is rare. It is so rare.
@@ -166,7 +159,6 @@ const chaptersRaw = [
     <br><br>
     I don't know how you do that. But I know the world is luckier because you see it the way you do. I am luckier because I got to stand next to you while you looked at things. Even if it was only for a little while. Even if I never told you.`,
 
-    // PAGE IX - Feeling Unwanted / Safety Net
     `I know I am probably one of the last people you like talking to. I can feel it. The way conversations with me feel like chores. The way you look for exits. I don't blame you. I am a lot. I am too much. I have always been too much.
     <br><br>
     That is fine. I am just grateful that you did talk to me. Even if it was out of pity. Even if it was because no one else was around. You talked to me. You looked at me. You treated me like I was human when most people treat me like furniture.
@@ -177,7 +169,6 @@ const chaptersRaw = [
     <br><br>
     I put a lot of things on you just because I needed something to fill the void in my chest. The void that never goes away. The void that has been there for as long as I can remember. You didn't know you were filling it. You didn't know you were keeping me from falling apart. But you were. And I will never forget that.`,
 
-    // PAGE X - The Void / What She Filled
     `I have this void. This empty space inside my chest that never goes away. It has been there for years. Some days it is small, like a pebble in my shoe. Other days it is enormous, like a canyon I cannot cross.
     <br><br>
     I have tried so many things to fill it. Food. Sleep. Music. Cutting. Nothing worked. The void always came back. It always wins. It is patient. It waits for me to feel okay, and then it reminds me that I am not.
@@ -190,7 +181,6 @@ const chaptersRaw = [
     <br><br>
     I don't know how to thank you for that. I don't know how to say, "You quieted the thing inside me that has been screaming for years." That sounds dramatic. That sounds like too much. But it is the truth. And this letter is the only place I can tell the truth.`,
 
-    // PAGE XI - Falling for Her / Not Love, But Something
     `I will always feel deeply about you. Not in a romantic way, not in the way people write songs about, not in the way that ends with weddings and forever. But in a way that feels like something I cannot explain. Something that doesn't have a name. Something that lives in a part of my heart I didn't know existed until you showed up.
     <br><br>
     I have never felt this way about a girl I don't love. That is the strangest part. Because I always thought — if you feel this way about someone, you love them. That is just how it works. Feelings this big? This consuming? This permanent? That has to be love.
@@ -201,7 +191,6 @@ const chaptersRaw = [
     <br><br>
     You don't try to be loud. You don't try to be noticed. But you are impossible to ignore. You are a soft thing in a loud world, and that is why I will never forget you. That is why a piece of me will always belong to you, even if you never asked for it.`,
 
-    // PAGE XII - Regrets / Things I Wish I Said
     `You may forget me in ten years. Maybe sooner. Maybe you have already started to forget. And that hurts. It hurts more than I want to admit. Because you are etched into me. You are ink on skin. But to you — I might just be a smudge. A name you used to know. A face you used to recognize.
     <br><br>
     I just wish we could have been friends. Real friends. The kind who text each other stupid things at 2am. The kind who know each other's favorite songs and worst fears. The kind who stay.
@@ -214,7 +203,6 @@ const chaptersRaw = [
     <br><br>
     I hope the distance between us won't be forever. I hope I will see you again. I know the chance is small. Microscopic, maybe. But I am holding onto it anyway. It is all I have left.`,
 
-    // PAGE XIII - What I Hope for Her
     `I hope you find your Noah. I hope there is someone out there who sees you the way I see you — but actually does something about it. Someone who tells you you're beautiful without swallowing the words. Someone who holds your hand in public and isn't afraid of who sees.
     <br><br>
     I hope he treats you like the royalty you deserve. I hope he notices the small things. The way you laugh. The way your voice gets soft when you're tired. The way you tuck your hair behind your ear. The way you say certain words with an accent that makes them sound like music.
@@ -227,7 +215,6 @@ const chaptersRaw = [
     <br><br>
     I wish the best for you. I truly do. You deserve a life that feels as beautiful as you are. You deserve love that is loud and certain and unafraid. You deserve everything. Everything. And I hope you get it. Even if I am not there to see it. Especially if I am not there to see it.`,
 
-    // PAGE XIV - What I'm Afraid Of
     `I am afraid I will forget your voice. The softness of it. The way you said my name. The way you laughed at things that weren't even that funny but you laughed anyway because you found joy in small places.
     <br><br>
     I am afraid I will forget your laugh. The sound of it. The way it made me feel like everything was going to be okay, even when it wasn't.
@@ -240,7 +227,6 @@ const chaptersRaw = [
     <br><br>
     I don't know if you would have stayed. I don't know if you would have looked at all of me and still wanted to be near me. I will never know. And that scares me too.`,
 
-    // PAGE XV - The Closing / Forever Grateful
     `Maybe that's the cruel thing about exchange students. They teach people how attached a heart can get in such little time. They show up, they bloom in your life like flowers in spring, and then they leave. And you are left standing in an empty field, wondering how something so beautiful could disappear so fast.
     <br><br>
     You came into my life with another language, another culture, another home. You were from a place I had never been, a world I didn't know. Yet somehow your soul still felt familiar to mine. Like I had known you before. Like we had met in another life and were just picking up where we left off.
@@ -263,7 +249,7 @@ const chaptersRaw = [
     <br><br>
     — a boy who will never forget the girl in pink
     <br><br>
-    <em>24 May 2026</em>`
+    <em>26 May 2026</em>`
 ];
 
 const chapters = chaptersRaw.map(chapter => formatPoeticText(chapter));
@@ -312,14 +298,14 @@ if (prevBtn && nextBtn) {
 
 updatePage();
 
-const style = document.createElement('style');
-style.textContent = `
+const styleAnim = document.createElement('style');
+styleAnim.textContent = `
     @keyframes pageEnter {
         from { opacity: 0; transform: rotateY(4deg); }
         to { opacity: 1; transform: rotateY(0); }
     }
 `;
-document.head.appendChild(style);
+document.head.appendChild(styleAnim);
 
 const starTrigger = document.getElementById("starTrigger");
 const messagePanel = document.getElementById("messagePanel");
@@ -401,4 +387,87 @@ function initProtection() {
             e.preventDefault();
         }
     });
+}
+
+// FALLING PETALS ANIMATION
+function initPetals() {
+    const canvas = document.getElementById("petalsCanvas");
+    const ctx = canvas.getContext("2d");
+    
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let petals = [];
+    const petalCount = 80;
+    
+    function resizeCanvas() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+    }
+    
+    class Petal {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height - height;
+            this.size = 8 + Math.random() * 12;
+            this.speedY = 0.8 + Math.random() * 1.5;
+            this.speedX = -0.3 + Math.random() * 0.6;
+            this.rotation = Math.random() * Math.PI * 2;
+            this.rotationSpeed = -0.02 + Math.random() * 0.04;
+            this.opacity = 0.5 + Math.random() * 0.4;
+            this.color = `rgba(255, ${180 + Math.random() * 50}, ${160 + Math.random() * 60}, ${this.opacity})`;
+        }
+        
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.rotation += this.rotationSpeed;
+            
+            if (this.y > height + 50) {
+                this.y = -50;
+                this.x = Math.random() * width;
+            }
+            if (this.x > width + 50) this.x = -50;
+            if (this.x < -50) this.x = width + 50;
+        }
+        
+        draw() {
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.rotation);
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.quadraticCurveTo(this.size / 2, this.size / 3, this.size, 0);
+            ctx.quadraticCurveTo(this.size / 2, -this.size / 3, 0, 0);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            ctx.restore();
+        }
+    }
+    
+    function initPetalsArray() {
+        for (let i = 0; i < petalCount; i++) {
+            petals.push(new Petal());
+        }
+    }
+    
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+        for (let petal of petals) {
+            petal.update();
+            petal.draw();
+        }
+        requestAnimationFrame(animate);
+    }
+    
+    window.addEventListener("resize", () => {
+        resizeCanvas();
+        petals = [];
+        initPetalsArray();
+    });
+    
+    resizeCanvas();
+    initPetalsArray();
+    animate();
 }
