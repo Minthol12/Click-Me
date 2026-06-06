@@ -1,4 +1,5 @@
 const correctPassword = "Notebook";
+
 const passwordOverlay = document.getElementById("passwordOverlay");
 const mainContent = document.getElementById("mainContent");
 const passwordInput = document.getElementById("passwordInput");
@@ -10,7 +11,9 @@ const passwordHint = document.getElementById("passwordHint");
 passwordHint.innerHTML = "Your Favorite Movie";
 
 function checkPassword() {
-    if (passwordInput.value === correctPassword) {
+    const input = passwordInput.value.trim();
+
+    if (input.toLowerCase() === correctPassword.toLowerCase()) {
         passwordOverlay.style.display = "none";
         mainContent.style.display = "block";
         initProtection();
@@ -25,6 +28,7 @@ function checkPassword() {
 
 unlockBtn.addEventListener("click", checkPassword);
 unlockBtn.addEventListener("touchstart", checkPassword);
+
 passwordInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") checkPassword();
 });
