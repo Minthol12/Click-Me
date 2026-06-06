@@ -20,14 +20,22 @@ function checkPassword() {
 }
 
 // Click + touch (mobile safe)
-unlockBtn.addEventListener("click", checkPassword);
-unlockBtn.addEventListener("touchstart", checkPassword);
-
-// Enter key
-passwordInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") checkPassword();
+unlockBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    checkPassword();
 });
+unlockBtn.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    checkPassword();
+}, { passive: false });
 
+// Also add this for mobile keyboard "Go/Enter" button
+passwordInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        checkPassword();
+    }
+});
 // Tab switching
 function initTabs() {
     const sectionBtns = document.querySelectorAll(".section-btn");
