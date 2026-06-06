@@ -1,3 +1,4 @@
+alert("JS is working");
 const correctPassword = "Notebook";
 
 const passwordOverlay = document.getElementById("passwordOverlay");
