@@ -1,42 +1,4 @@
-alert("JS is working");
 
-const passwordOverlay = document.getElementById("passwordOverlay");
-const mainContent = document.getElementById("mainContent");
-const passwordInput = document.getElementById("passwordInput");
-const unlockBtn = document.getElementById("unlockBtn");
-const passwordError = document.getElementById("passwordError");
-const passwordHint = document.getElementById("passwordHint");
-
-// Set hint
-passwordHint.innerHTML = "Your Favorite Movie";
-
-// ✅ Allow ANY password (no checking)
-function checkPassword() {
-    passwordOverlay.style.display = "none";
-    mainContent.style.display = "block";
-    initProtection();
-    initPetals();
-    initTabs();
-    if (passwordInput) passwordInput.blur();
-}
-
-// Click + touch (mobile safe)
-unlockBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    checkPassword();
-});
-unlockBtn.addEventListener("touchstart", (e) => {
-    e.preventDefault();
-    checkPassword();
-}, { passive: false });
-
-// Also add this for mobile keyboard "Go/Enter" button
-passwordInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-        e.preventDefault();
-        checkPassword();
-    }
-});
 // Tab switching
 function initTabs() {
     const sectionBtns = document.querySelectorAll(".section-btn");
