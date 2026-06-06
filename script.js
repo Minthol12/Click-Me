@@ -1,4 +1,9 @@
+const mainContent = document.getElementById("mainContent");
 
+
+initProtection();
+initPetals();
+initTabs();
 // Tab switching
 function initTabs() {
     const sectionBtns = document.querySelectorAll(".section-btn");
