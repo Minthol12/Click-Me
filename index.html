@@ -948,10 +948,6 @@
             <br><br>
             I will forever be grateful for you. More than you will ever know. More than these words can say. More than this letter can hold.
             <br><br>
-            This letter won't be sent. I know that. I have known it from the beginning. But if you're reading this — somehow — you already know it's for you. You already know who wrote it. You already know that every word is true.
-            <br><br>
-            <em>Yours in ways I don't have words for,</em>
-            <br><br>
             — a boy who will never forget the girl in pink
             <br><br>
             <em>26 May 2026</em>`
@@ -962,6 +958,7 @@
         const totalChapters = chapters.length;
         const romanNumerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV"];
         
+// ========== REPLACE THE updatePage FUNCTION WITH THIS ==========
         function updatePage() {
             const pageTextDiv = document.getElementById("pageText");
             const chapterBadge = document.getElementById("chapterBadge");
@@ -970,6 +967,7 @@
             const prevBtn = document.getElementById("prevPageBtn");
             const nextBtn = document.getElementById("nextPageBtn");
             const currentPageDiv = document.getElementById("currentPage");
+            const pageText = document.getElementById("pageText");
             
             if (pageTextDiv) pageTextDiv.innerHTML = chapters[currentChapter];
             if (chapterBadge) chapterBadge.textContent = `chapter ${romanNumerals[currentChapter]}`;
@@ -978,6 +976,18 @@
             if (prevBtn) prevBtn.disabled = currentChapter === 0;
             if (nextBtn) nextBtn.disabled = currentChapter === totalChapters - 1;
             
+            // SCROLL TO TOP EVERY TIME YOU CHANGE PAGE
+            if (pageText) {
+                pageText.scrollTop = 0;
+            }
+            
+            // RESET THE SCROLL INDICATOR (make it visible again on new page)
+            const scrollIndicator = document.getElementById("scrollIndicator");
+            if (scrollIndicator) {
+                scrollIndicator.style.opacity = "1";
+                scrollIndicator.style.visibility = "visible";
+            }
+            
             if (currentPageDiv) {
                 currentPageDiv.style.animation = "none";
                 setTimeout(() => {
@@ -985,7 +995,6 @@
                 }, 10);
             }
         }
-        
         // ========== INIT TABS ==========
         function initTabs() {
             const sectionBtns = document.querySelectorAll(".section-btn");
