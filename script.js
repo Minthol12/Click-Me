@@ -142,8 +142,6 @@ const chaptersRaw = [
     That stuck with me. The way you didn't even seem to try. It just came out of you. Like drawing was as natural as breathing. I don't have that kind of talent. I don't have anything that comes out of me that easily. But you did. And it was beautiful to watch.
     <br><br>
     I wish I had told you that. I wish I had said, "You're really good at that." But I didn't. I just watched from across the room, quiet, hoping you wouldn't notice me staring. I noticed everything, Naemi. Everything.`,
-
-    `I noticed the small things. The Red Bulls. Pomegranate or white. You always reached for one of those two. Never the regular one. Never the blue one. Just pomegranate or white. I don't know why that stuck with me. Maybe because it was a pattern. Something you did without thinking. Something that was just yours.
     <br><br>
     I noticed the way you tucked your hair behind your ear. The way you laughed with your whole face. The way you looked down when you were thinking. The way you said certain words with an accent that made them sound different. Softer. Like they meant more when they came out of your mouth.
     <br><br>
