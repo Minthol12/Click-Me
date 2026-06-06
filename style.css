@@ -703,3 +703,33 @@ body {
         font-size: 1rem;
     }
 }
+
+/* Make everything tap-able on phone */
+button, 
+.section-btn, 
+.play-btn, 
+.nav-arrow, 
+.open-book-btn,
+.star-trigger,
+.saved-msg {
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Make sure clicks register */
+.section-btn:active,
+.play-btn:active,
+.nav-arrow:active {
+    transform: scale(0.96);
+    transition: transform 0.05s;
+}
+
+/* Ensure nothing blocks clicks */
+#petalsCanvas {
+    pointer-events: none;  /* This is good - petals don't block */
+}
+
+.main-content {
+    pointer-events: auto;   /* Make sure content receives clicks */
+}
