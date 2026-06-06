@@ -91,7 +91,7 @@ const chaptersRaw = [
 
     `I know we didn't talk a lot. That is one of my greatest regrets. I replay it in my head like a movie I'm scared to forget — all the moments I could have said something, asked something, stayed a little longer. But I was scared. I am always scared.
     <br><br>
-    But when we did talk — those rare, short moments — something happened inside me. Hearing the softness of your voice, the calmness, it made me calm. My mind, which never stops running, which never shuts up, went quiet. Completely quiet. Do you understand how rare that is for me? My brain is a warzone most days. But you — your voice was like a ceasefire.
+    But when we did talk — those rare, short moments — something happened inside me. Hearing the softness of your voice, the calmness, it made me calm. My mind, which never stops running, which never shuts up, went quiet. Completely quiet.
     <br><br>
     No matter how much time passes, there will always be a version of me standing inside those moments with you. A version of me frozen in time, still hearing your voice, still feeling that rare and beautiful silence. Even when everything else changes, that version of me will not move. He will stand there forever, holding onto the only peace he ever knew.
     <br><br>
@@ -171,7 +171,7 @@ const chaptersRaw = [
 
     `I have this void. This empty space inside my chest that never goes away. It has been there for years. Some days it is small, like a pebble in my shoe. Other days it is enormous, like a canyon I cannot cross.
     <br><br>
-    I have tried so many things to fill it. Food. Sleep. Music. Cutting. Nothing worked. The void always came back. It always wins. It is patient. It waits for me to feel okay, and then it reminds me that I am not.
+    I have tried so many things to fill it. Food. Sleep. Music. Nothing worked. The void always came back. It always wins. It is patient. It waits for me to feel okay, and then it reminds me that I am not.
     <br><br>
     Then you talked to me. And the void got quieter. Not gone. Never gone. But quieter. Like someone turned down the volume on a song I had been listening to for years. I didn't even notice how loud it was until you made it soft.
     <br><br>
