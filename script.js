@@ -24,7 +24,8 @@ function checkPassword() {
 }
 
 unlockBtn.addEventListener("click", checkPassword);
-passwordInput.addEventListener("keypress", (e) => {
+unlockBtn.addEventListener("touchstart", checkPassword);
+passwordInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") checkPassword();
 });
 
