@@ -1,9 +1,39 @@
+alert("JS is working");
+
+// Get elements
 const mainContent = document.getElementById("mainContent");
+const bookCover = document.getElementById("bookCover");
+const bookOpen = document.getElementById("bookOpen");
+const openBookBtn = document.getElementById("openBookBtn");
 
+// Make sure content is visible
+if (mainContent) mainContent.style.display = "block";
 
-initProtection();
-initPetals();
-initTabs();
+// Initialize everything
+function initAll() {
+    initProtection();
+    initPetals();
+    initTabs();
+}
+
+// Run when page loads
+window.addEventListener('DOMContentLoaded', function() {
+    initAll();
+    
+    // Fix for book button
+    if (openBookBtn) {
+        openBookBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            if (bookCover) bookCover.style.display = "none";
+            if (bookOpen) bookOpen.style.display = "block";
+        });
+        openBookBtn.addEventListener("touchstart", function(e) {
+            e.preventDefault();
+            if (bookCover) bookCover.style.display = "none";
+            if (bookOpen) bookOpen.style.display = "block";
+        });
+    }
+});
 // Tab switching
 function initTabs() {
     const sectionBtns = document.querySelectorAll(".section-btn");
