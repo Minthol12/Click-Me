@@ -558,6 +558,9 @@ body {
     line-height: 1.65;
     color: #2e2a24;
     font-family: 'Cormorant Garamond', serif;
+    -webkit-overflow-scrolling: touch;  
+    overflow-y: auto;                   
+    max-height: 60vh; 
 }
 
 .page-text .cursive-you {
