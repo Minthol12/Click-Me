@@ -32,34 +32,33 @@
         .main-content {
             position: relative;
             z-index: 2;
-            max-width: 900px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 1.5rem;
+            padding: 1rem;
             display: block;
         }
 
         .sections-container {
             display: flex;
             justify-content: center;
-            gap: 1.2rem;
+            gap: 1rem;
             flex-wrap: wrap;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .section-btn {
             background: #f0c4c4;
             border: none;
-            padding: 12px 28px;
+            padding: 14px 32px;
             border-radius: 60px;
             font-family: 'Inter', sans-serif;
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-weight: 500;
             color: #ffffff;
             cursor: pointer;
             transition: all 0.2s;
-            letter-spacing: 0.5px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            min-height: 48px;
+            min-height: 55px;
             touch-action: manipulation;
         }
 
@@ -91,14 +90,14 @@
             background: rgba(255, 248, 240, 0.95);
             backdrop-filter: blur(4px);
             border-radius: 32px;
-            padding: 2rem;
+            padding: 1rem;
             box-shadow: 0 15px 35px rgba(0,0,0,0.08);
             border: 1px solid rgba(255,255,255,0.6);
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
+            font-size: 1.8rem;
             font-weight: 500;
             color: #c28a8a;
             margin-bottom: 1.8rem;
@@ -116,7 +115,7 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 0.8rem 1.2rem;
+            padding: 1rem 1.5rem;
             background: white;
             border-radius: 60px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -124,7 +123,7 @@
         }
 
         .song-icon {
-            font-size: 1.4rem;
+            font-size: 2rem;
         }
 
         .song-info {
@@ -133,25 +132,25 @@
 
         .song-name {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: #2e2a24;
         }
 
         .song-artist {
             font-family: 'Inter', sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.9rem;
             color: #b29080;
         }
 
         .play-btn {
             background: #c28a8a;
             border: none;
-            width: 44px;
-            height: 44px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             color: white;
-            font-size: 0.9rem;
+            font-size: 1.3rem;
             cursor: pointer;
             transition: all 0.2s;
             touch-action: manipulation;
@@ -164,9 +163,9 @@
         .music-note {
             text-align: center;
             font-family: 'Inter', sans-serif;
-            font-size: 0.65rem;
+            font-size: 0.9rem;
             color: #bfa090;
-            margin-top: 1.2rem;
+            margin-top: 1.5rem;
         }
 
         .book-container {
@@ -196,14 +195,14 @@
 
         .cover-content h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 400;
             color: #fef0da;
             margin: 0.8rem 0;
         }
 
         .cover-icon {
-            font-size: 2rem;
+            font-size: 3rem;
         }
 
         .cover-decoration {
@@ -215,30 +214,30 @@
 
         .cover-subtitle {
             color: #f5e2c1;
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             font-style: italic;
         }
 
         .cover-flags {
             margin-top: 1rem;
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
 
         .open-book-btn {
             margin-top: 1.5rem;
             background: #f5e2c1;
             border: none;
-            padding: 12px 28px;
+            padding: 14px 32px;
             font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             border-radius: 40px;
             cursor: pointer;
             color: #5a2e1a;
             touch-action: manipulation;
-            min-height: 48px;
+            min-height: 55px;
         }
 
         .open-book-btn:active {
@@ -248,7 +247,7 @@
         .book-open {
             background: #f3ecdf;
             border-radius: 16px;
-            padding: 1.5rem;
+            padding: 1rem;
             position: relative;
             border-left: 4px solid #b87a4a;
         }
@@ -284,23 +283,23 @@
         .map-icon-container {
             position: relative;
             cursor: pointer;
-            font-size: 1.3rem;
+            font-size: 1.8rem;
             touch-action: manipulation;
         }
 
         .map-popup {
             position: absolute;
-            top: 28px;
+            top: 35px;
             left: 0;
             background: #fffef5;
             border: 1px solid #dcc8b0;
             border-radius: 12px;
-            padding: 0.5rem;
-            width: 160px;
+            padding: 0.8rem;
+            width: 200px;
             opacity: 0;
             visibility: hidden;
             transition: 0.2s;
-            font-size: 0.65rem;
+            font-size: 0.85rem;
             z-index: 10;
         }
 
@@ -318,48 +317,90 @@
 
         .chapter-badge {
             font-family: 'Inter', sans-serif;
-            font-size: 0.6rem;
+            font-size: 0.9rem;
             color: #b88a62;
             background: #fcf3e6;
-            padding: 0.2rem 0.7rem;
+            padding: 0.3rem 1rem;
             border-radius: 30px;
         }
 
         .page-flip-container {
-            min-height: 450px;
+            min-height: 65vh;
         }
 
         .page-current {
             background: #fffef7;
             border-radius: 6px;
+            height: 100%;
         }
 
         .page-content {
-            padding: 0.8rem;
+            padding: 1rem;
         }
 
         .page-number {
-            font-size: 0.85rem;
+            font-size: 1.2rem;
             color: #c89f7a;
             border-bottom: 1px solid #f0dfce;
-            padding-bottom: 0.2rem;
-            margin-bottom: 0.8rem;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
             display: inline-block;
         }
 
+        /* BIGGER FONT FOR TEXT - TAKES UP MORE SCREEN */
         .page-text {
-            font-size: 0.95rem;
-            line-height: 1.65;
+            font-size: 1.3rem;
+            line-height: 1.8;
             color: #2e2a24;
             font-family: 'Cormorant Garamond', serif;
             -webkit-overflow-scrolling: touch;
             overflow-y: auto;
-            max-height: 55vh;
+            max-height: 65vh;
+            min-height: 55vh;
+            padding-right: 0.5rem;
+        }
+
+        /* Scroll indicator - shows there's more text below */
+        .scroll-indicator {
+            text-align: center;
+            margin-top: 0.8rem;
+            padding: 0.5rem;
+            animation: bounce 1.5s infinite;
+            color: #c28a8a;
+            font-size: 1.1rem;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .scroll-indicator span {
+            font-size: 1.3rem;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); opacity: 0.6; }
+            50% { transform: translateY(8px); opacity: 1; }
+        }
+
+        .page-text::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .page-text::-webkit-scrollbar-track {
+            background: #f0dfce;
+            border-radius: 4px;
+        }
+
+        .page-text::-webkit-scrollbar-thumb {
+            background: #c28a8a;
+            border-radius: 4px;
         }
 
         .page-text .cursive-you {
             font-family: 'Dancing Script', cursive;
-            font-size: 1rem;
+            font-size: 1.4rem;
         }
 
         .book-navigation {
@@ -376,14 +417,14 @@
         .nav-arrow {
             background: none;
             border: 1px solid #ddccb8;
-            padding: 8px 16px;
+            padding: 10px 20px;
             border-radius: 40px;
             font-family: 'Inter', sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.9rem;
             cursor: pointer;
             color: #7a5a3e;
             touch-action: manipulation;
-            min-height: 44px;
+            min-height: 50px;
         }
 
         .nav-arrow:active {
@@ -397,7 +438,7 @@
 
         .page-counter {
             font-family: 'Inter', sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.9rem;
             color: #b29070;
         }
 
@@ -410,12 +451,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.4rem;
+            gap: 0.6rem;
             cursor: pointer;
-            font-size: 0.7rem;
+            font-size: 0.9rem;
             font-family: 'Inter', sans-serif;
             color: #b29070;
-            padding: 8px;
+            padding: 12px;
             touch-action: manipulation;
         }
 
@@ -423,19 +464,23 @@
             transform: scale(0.97);
         }
 
+        .star-icon {
+            font-size: 1.3rem;
+        }
+
         .message-panel {
             margin-top: 0.6rem;
             background: #fefaf3;
             border-radius: 16px;
-            padding: 0.8rem;
+            padding: 1rem;
             border: 1px solid #e8d4c0;
         }
 
         .message-panel textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             font-family: 'Inter', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             border: 1px solid #e0cfbb;
             border-radius: 12px;
         }
@@ -450,13 +495,13 @@
         .message-buttons button {
             background: none;
             border: 1px solid #ddccb8;
-            padding: 6px 16px;
+            padding: 8px 20px;
             border-radius: 40px;
             font-family: 'Inter', sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.85rem;
             cursor: pointer;
             touch-action: manipulation;
-            min-height: 40px;
+            min-height: 44px;
         }
 
         .message-buttons button:first-child {
@@ -471,48 +516,43 @@
 
         .saved-messages-list {
             margin-top: 0.6rem;
-            max-height: 120px;
+            max-height: 150px;
             overflow-y: auto;
-            font-size: 0.7rem;
+            font-size: 0.85rem;
         }
 
         .saved-msg {
             background: #fff6ed;
-            padding: 0.5rem;
+            padding: 0.8rem;
             border-radius: 10px;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.5rem;
             border-left: 2px solid #c89f7a;
             word-break: break-word;
         }
 
         .book-footer {
-            margin-top: 0.8rem;
+            margin-top: 1rem;
             text-align: center;
-            font-size: 0.55rem;
+            font-size: 0.75rem;
             font-family: 'Inter', sans-serif;
             color: #b29070;
         }
 
         @media (max-width: 600px) {
             .main-content {
-                padding: 1rem;
-            }
-            .section-btn {
-                padding: 10px 20px;
-                font-size: 0.85rem;
-            }
-            .sections-container {
-                gap: 0.8rem;
-            }
-            .book-card, .music-card {
-                padding: 1.2rem;
+                padding: 0.8rem;
             }
             .page-text {
-                font-size: 0.9rem;
+                font-size: 1.2rem;
+                max-height: 60vh;
+                min-height: 50vh;
             }
-            .nav-arrow {
-                padding: 6px 12px;
-                font-size: 0.65rem;
+            .section-btn {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+            .song-name {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -575,6 +615,10 @@
                                         <div class="page-content">
                                             <span class="page-number" id="pageNumber">I</span>
                                             <div class="page-text" id="pageText"></div>
+                                            <!-- SCROLL INDICATOR - shows there's more text below -->
+                                            <div class="scroll-indicator" id="scrollIndicator">
+                                                <span>👇</span> scroll for more <span>👇</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -810,7 +854,7 @@
             
             `I noticed the way you tucked your hair behind your ear. The way you laughed with your whole face. The way you looked down when you were thinking. The way you said certain words with an accent that made them sound different. Softer. Like they meant more when they came out of your mouth.
             <br><br>
-            I collected these things. Like little treasures. I stored them away in a part of my brain labeled "Naemi." And I visit that part often. Too often, maybe. But I can't help it. You were interesting. You were different. You were someone I wanted to understand.
+            I collected these things. Like little treasures. I stored them away in a part of my brain. And I visit that part often. Too often, maybe. But I can't help it. You were interesting. You were different. You were someone I wanted to understand.
             <br><br>
             I never told you any of this. I never said, "I notice things about you." I was too scared. Too quiet. Too worried that you would think I was weird. But I am weird. And I noticed everything. And I remember all of it.`,
             
@@ -818,15 +862,13 @@
             <br><br>
             Things that are ugly to everyone else — you found something beautiful in them. A cracked sidewalk. An old building. A cloudy sky. You looked at things and saw stories. You looked at things and saw art. I don't know how you do that. I don't know if you were born with it or if you taught yourself. But it is rare. It is so rare.
             <br><br>
-            Things that are ordinary — you made them feel like magic. A cup of coffee. A walk home. A quiet conversation. When you were there, everything felt different. Brighter. Softer. More important. You had this way of making the mundane feel sacred.
-            <br><br>
             I don't know how you do that. But I know the world is luckier because you see it the way you do. I am luckier because I got to stand next to you while you looked at things. Even if it was only for a little while. Even if I never told you.`,
             
             `I know I am probably one of the last people you like talking to. I can feel it. The way conversations with me feel like chores. The way you look for exits. I don't blame you. I am a lot. I am too much. I have always been too much.
             <br><br>
             That is fine. I am just grateful that you did talk to me. Even if it was out of pity. Even if it was because no one else was around. You talked to me. You looked at me. You treated me like I was human when most people treat me like furniture.
             <br><br>
-            It made the darkness not so dark. You don't understand how dark it gets in my head. You don't know about the nights I spend staring at ceilings, wondering why I am the way I am. You don't know about the thoughts that circle like vultures, waiting for me to fall asleep so they can tear me apart. But you — when you talked to me — the vultures went quiet. Just for a little while. Just long enough for me to breathe.
+            It made the darkness not so dark. You don't understand how dark it gets in my head. You don't know about the nights I spend staring at ceilings, wondering why I am the way I am. But you — when you talked to me — the thoughts went quiet. Just for a little while. Just long enough for me to breathe.
             <br><br>
             You were my safety net without knowing it. And I am sorry for that. I am sorry that I put that on you without asking. I am sorry that I used your kindness as a crutch. That is not fair to you. You did not sign up to hold someone together. You were just being nice. And I turned your niceness into survival.
             <br><br>
@@ -1140,6 +1182,18 @@
                 closeMessageBtn.addEventListener("touchstart", (e) => {
                     e.preventDefault();
                     messagePanel.style.display = "none";
+                });
+            }
+            
+            // Hide scroll indicator if user scrolls (they figured it out)
+            const pageText = document.getElementById("pageText");
+            if (pageText) {
+                pageText.addEventListener("scroll", function() {
+                    const indicator = document.getElementById("scrollIndicator");
+                    if (indicator && this.scrollTop > 10) {
+                        indicator.style.opacity = "0";
+                        indicator.style.transition = "opacity 0.3s";
+                    }
                 });
             }
         }
