@@ -17,6 +17,7 @@ function checkPassword() {
     initProtection();
     initPetals();
     initTabs();
+    if (passwordInput) passwordInput.blur();
 }
 
 // Click + touch (mobile safe)
