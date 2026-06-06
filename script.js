@@ -1,5 +1,4 @@
 alert("JS is working");
-const correctPassword = "Notebook";
 
 const passwordOverlay = document.getElementById("passwordOverlay");
 const mainContent = document.getElementById("mainContent");
@@ -8,28 +7,23 @@ const unlockBtn = document.getElementById("unlockBtn");
 const passwordError = document.getElementById("passwordError");
 const passwordHint = document.getElementById("passwordHint");
 
-// Set The Notebook hint
+// Set hint
 passwordHint.innerHTML = "Your Favorite Movie";
 
+// ✅ Allow ANY password (no checking)
 function checkPassword() {
-    const input = passwordInput.value.trim();
-
-    if (input.toLowerCase() === correctPassword.toLowerCase()) {
-        passwordOverlay.style.display = "none";
-        mainContent.style.display = "block";
-        initProtection();
-        initPetals();
-        initTabs();
-    } else {
-        passwordError.textContent = "that's not the word... try again";
-        passwordInput.value = "";
-        passwordInput.focus();
-    }
+    passwordOverlay.style.display = "none";
+    mainContent.style.display = "block";
+    initProtection();
+    initPetals();
+    initTabs();
 }
 
+// Click + touch (mobile safe)
 unlockBtn.addEventListener("click", checkPassword);
 unlockBtn.addEventListener("touchstart", checkPassword);
 
+// Enter key
 passwordInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") checkPassword();
 });
